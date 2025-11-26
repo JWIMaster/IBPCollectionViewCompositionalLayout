@@ -10,11 +10,13 @@ let package = Package(
             name: "IBPCollectionViewCompositionalLayout",
             targets: ["IBPCollectionViewCompositionalLayout"]),
     ],
-    dependencies: [],
+    dependencies: [
+        .package(url: "https://github.com/JWIMaster/DiffableDataSources", .branch("master"))
+    ],
     targets: [
         .target(
             name: "IBPCollectionViewCompositionalLayout",
-            dependencies: []),
+            dependencies: ["DiffableDataSources"]),
         .testTarget(
             name: "IBPCollectionViewCompositionalLayoutTests",
             dependencies: ["IBPCollectionViewCompositionalLayout"]),
