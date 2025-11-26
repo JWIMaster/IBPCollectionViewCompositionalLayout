@@ -4,7 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "IBPCollectionViewCompositionalLayout",
-    platforms: [.iOS(.v10)],
+    platforms: [.iOS("7.0")],
     products: [
         .library(
             name: "IBPCollectionViewCompositionalLayout",
