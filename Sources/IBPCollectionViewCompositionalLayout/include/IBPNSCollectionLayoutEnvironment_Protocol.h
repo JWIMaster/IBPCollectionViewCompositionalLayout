@@ -1,4 +1,7 @@
 #import <UIKit/UIKit.h>
+#import "../UIViewController+DDTraitCollection.h"
+#import "../UIView+DDTraitCollection.h"
+#import "../DDTraitCollection.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -7,7 +10,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol IBPNSCollectionLayoutEnvironment<NSObject>
 
 @property(nonatomic, readonly) id<IBPNSCollectionLayoutContainer> container;
-@property(nonatomic, readonly) UITraitCollection *traitCollection;
+@property(nonatomic, readonly) DDTraitCollection *traitCollection;
 
 @end
 

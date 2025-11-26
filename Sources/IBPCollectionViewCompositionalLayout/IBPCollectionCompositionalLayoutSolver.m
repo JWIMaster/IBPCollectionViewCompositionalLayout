@@ -9,6 +9,9 @@
 #import "IBPNSCollectionLayoutSection_Private.h"
 #import "IBPNSCollectionLayoutSize_Private.h"
 #import "IBPNSCollectionLayoutSpacing.h"
+#import "UIViewController+DDTraitCollection.h"
+#import "UIView+DDTraitCollection.h"
+#import "DDTraitCollection.h"
 
 @interface IBPCollectionCompositionalLayoutSolver()
 
@@ -42,7 +45,7 @@
     return self;
 }
 
-- (void)solveForContainer:(IBPNSCollectionLayoutContainer *)container traitCollection:(UITraitCollection *)traitCollection {
+- (void)solveForContainer:(IBPNSCollectionLayoutContainer *)container traitCollection:(DDTraitCollection *)traitCollection {
     CGSize collectionContentSize = container.effectiveContentSize;
 
     IBPNSDirectionalEdgeInsets sectionContentInsets = self.layoutSection.contentInsets;
@@ -68,7 +71,7 @@
 }
 
 - (void)solveGroup:(IBPNSCollectionLayoutGroup *)group forContainer:(IBPNSCollectionLayoutContainer *)container
-    containerFrame:(CGRect)containerFrame traitCollection:(UITraitCollection *)traitCollection {
+    containerFrame:(CGRect)containerFrame traitCollection:(DDTraitCollection *)traitCollection {
     __block CGRect contentFrame = self.contentFrame;
     contentFrame.origin.x += container.contentInsets.leading;
     contentFrame.origin.y += container.contentInsets.top;

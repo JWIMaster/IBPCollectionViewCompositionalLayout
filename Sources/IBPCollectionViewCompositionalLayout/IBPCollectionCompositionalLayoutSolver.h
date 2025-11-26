@@ -1,4 +1,7 @@
 #import <UIKit/UIKit.h>
+#import "UIViewController+DDTraitCollection.h"
+#import "UIView+DDTraitCollection.h"
+#import "DDTraitCollection.h"
 
 @class IBPNSCollectionLayoutContainer;
 @class IBPNSCollectionLayoutItem;
@@ -16,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
                         scrollDirection:(UICollectionViewScrollDirection)scrollDirection;
 
 - (void)solveForContainer:(IBPNSCollectionLayoutContainer *)container
-          traitCollection:(UITraitCollection *)traitCollection;
+          traitCollection:(DDTraitCollection *)traitCollection;
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath;
 - (IBPNSCollectionLayoutItem *)layoutItemAtIndexPath:(NSIndexPath *)indexPath;
